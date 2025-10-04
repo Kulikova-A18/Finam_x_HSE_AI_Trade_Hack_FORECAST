@@ -1,0 +1,694 @@
+2025-10-04 21:33:22,610 - INFO - TRAINING_PROCESS_START
+2025-10-04 21:33:22,610 - INFO - MODEL_TRAINING_START
+2025-10-04 21:33:22,610 - INFO - DATA_LOADING_START - train
+2025-10-04 21:33:24,624 - INFO - DATA_LOADING_SUCCESS - News: 25425, Candles: 20009, Tickers: 19
+2025-10-04 21:33:24,624 - INFO - DATA_PREPROCESSING_START
+2025-10-04 21:33:24,674 - INFO - DUPLICATE_REMOVAL - Removed: 38
+2025-10-04 21:33:24,674 - INFO - FEATURE_ENGINEERING - Creating advanced features
+2025-10-04 21:33:24,989 - INFO - TICKER_ASSIGNMENT
+2025-10-04 21:33:27,848 - INFO - TICKER_ASSIGNMENT - Assigned: 23364, Coverage: 91.9%
+2025-10-04 21:33:27,854 - INFO - NEWS_FEATURES_CREATION
+2025-10-04 21:33:29,247 - INFO - DATA_MERGING
+2025-10-04 21:33:29,264 - INFO - DATA_MERGING - Successfully merged with news features
+2025-10-04 21:33:29,265 - INFO - DATA_MERGING - Final shape: (19971, 42)
+2025-10-04 21:33:29,265 - INFO - FEATURE_ENGINEERING - Adding market features
+2025-10-04 21:33:29,280 - INFO - DATA_PREPROCESSING_SUCCESS
+2025-10-04 21:33:29,280 - INFO - TARGET_CREATION
+2025-10-04 21:33:29,280 - INFO - TARGET_CREATION - Horizons: [1, 20]
+2025-10-04 21:33:29,297 - INFO - TARGET_CREATION - Created target for 1 days
+2025-10-04 21:33:29,304 - INFO - TARGET_CREATION - Created target for 20 days
+2025-10-04 21:33:29,310 - INFO - TARGET_CREATION - Removed: 380, Final: 19591
+2025-10-04 21:33:29,310 - INFO - FEATURE_PREPARATION
+2025-10-04 21:33:29,316 - INFO - FEATURE_PREPARATION - Available features: 42
+2025-10-04 21:33:29,321 - INFO - FEATURE_PREPARATION - NaN values: 5111
+2025-10-04 21:33:29,321 - INFO - FEATURE_IMPUTATION - Applying median imputation
+2025-10-04 21:33:29,406 - INFO - FEATURE_PREPARATION - Scaling features
+2025-10-04 21:33:29,415 - INFO - FEATURE_PREPARATION - Final shape: (19591, 42)
+2025-10-04 21:33:29,415 - INFO - TARGET_CREATION - Returns mean: 0.000397, std: 0.022913
+2025-10-04 21:33:29,416 - INFO - TARGET_CREATION - Up probability: 0.496
+2025-10-04 21:33:29,416 - INFO - MODEL_INITIALIZATION
+2025-10-04 21:33:29,416 - INFO - RETURN_MODEL_TRAINING
+2025-10-04 21:34:36,993 - INFO - CROSS_VALIDATION - rf: -0.0005
+2025-10-04 21:40:06,786 - INFO - CROSS_VALIDATION - gbm: -0.0005
+2025-10-04 21:40:12,584 - INFO - CROSS_VALIDATION - xgb: -0.0005
+2025-10-04 21:40:12,585 - INFO - ENSEMBLE_TRAINING - Best model: xgb with score: -0.0005
+2025-10-04 21:40:13,601 - INFO - PROB_MODEL_TRAINING
+2025-10-04 21:40:22,176 - INFO - CROSS_VALIDATION - rf: 0.5344
+2025-10-04 21:40:24,543 - INFO - CROSS_VALIDATION - xgb: 0.5540
+2025-10-04 21:40:24,544 - INFO - ENSEMBLE_TRAINING - Best model: xgb with score: 0.5540
+2025-10-04 21:40:25,483 - INFO - TRAINING_PERFORMANCE - MAE: 0.008679, RMSE: 0.011825, Accuracy: 0.959
+2025-10-04 21:40:25,486 - INFO - TRAINING_PERFORMANCE - Top 10 features:
+2025-10-04 21:40:25,486 - INFO - TRAINING_PERFORMANCE - market_avg_close: 0.0922
+2025-10-04 21:40:25,486 - INFO - TRAINING_PERFORMANCE - volatility_5d: 0.0416
+2025-10-04 21:40:25,486 - INFO - TRAINING_PERFORMANCE - close_open_ratio: 0.0379
+2025-10-04 21:40:25,486 - INFO - TRAINING_PERFORMANCE - returns_10d: 0.0362
+2025-10-04 21:40:25,486 - INFO - TRAINING_PERFORMANCE - news_count: 0.0354
+2025-10-04 21:40:25,487 - INFO - TRAINING_PERFORMANCE - volume_ratio_20: 0.0324
+2025-10-04 21:40:25,487 - INFO - TRAINING_PERFORMANCE - high_low_ratio: 0.0317
+2025-10-04 21:40:25,487 - INFO - TRAINING_PERFORMANCE - volume_ratio_10: 0.0311
+2025-10-04 21:40:25,487 - INFO - TRAINING_PERFORMANCE - returns_2d: 0.0311
+2025-10-04 21:40:25,487 - INFO - TRAINING_PERFORMANCE - volume_ratio_5: 0.0304
+2025-10-04 21:40:25,487 - INFO - MODEL_TRAINING_SUCCESS
+2025-10-04 21:40:25,488 - INFO - ARTIFACTS_SAVING
+2025-10-04 21:40:25,488 - INFO - ARTIFACTS_SAVING
+2025-10-04 21:40:25,503 - INFO - ARTIFACTS_SAVING - Path: ./models/model_artifacts.joblib
+2025-10-04 21:40:25,503 - INFO - VALIDATION_PREDICTIONS_START
+2025-10-04 21:40:25,503 - INFO - PREDICTION_HORIZON_START - 1 day
+2025-10-04 21:40:25,503 - INFO - PREDICTION_START - Horizon: 1 days
+2025-10-04 21:40:25,503 - INFO - DATA_LOADING_START - predict
+2025-10-04 21:40:25,667 - INFO - DATA_LOADING_SUCCESS - News: 2030, Candles: 1745, Tickers: 19
+2025-10-04 21:40:25,667 - INFO - DATA_PREPROCESSING_START
+2025-10-04 21:40:25,670 - INFO - DUPLICATE_REMOVAL - Removed: 0
+2025-10-04 21:40:25,670 - INFO - FEATURE_ENGINEERING - Creating advanced features
+2025-10-04 21:40:25,912 - INFO - TICKER_ASSIGNMENT
+2025-10-04 21:40:26,373 - INFO - TICKER_ASSIGNMENT - Assigned: 1890, Coverage: 93.1%
+2025-10-04 21:40:26,373 - INFO - NEWS_FEATURES_CREATION
+2025-10-04 21:40:26,616 - INFO - DATA_MERGING
+2025-10-04 21:40:26,623 - INFO - DATA_MERGING - Successfully merged with news features
+2025-10-04 21:40:26,624 - INFO - DATA_MERGING - Final shape: (1745, 42)
+2025-10-04 21:40:26,625 - INFO - FEATURE_ENGINEERING - Adding market features
+2025-10-04 21:40:26,632 - INFO - DATA_PREPROCESSING_SUCCESS
+2025-10-04 21:40:26,633 - INFO - FEATURE_PREPARATION
+2025-10-04 21:40:26,634 - INFO - FEATURE_PREPARATION - Available features: 42
+2025-10-04 21:40:26,637 - INFO - FEATURE_PREPARATION - NaN values: 5111
+2025-10-04 21:40:26,637 - INFO - FEATURE_IMPUTATION - Applying median imputation
+2025-10-04 21:40:26,652 - INFO - FEATURE_PREPARATION - Scaling features
+2025-10-04 21:40:26,656 - INFO - FEATURE_PREPARATION - Final shape: (1745, 42)
+2025-10-04 21:40:26,714 - INFO - PREDICTION_SUCCESS - Tickers: 19, Mean return: -0.002296, Mean probability: 0.293
+2025-10-04 21:40:26,714 - INFO - PREDICTION_SUCCESS - Saved to: ./predictions/predictions_1d.csv
+2025-10-04 21:40:26,715 - INFO - PREDICTION_HORIZON_START - 20 days
+2025-10-04 21:40:26,715 - INFO - PREDICTION_START - Horizon: 20 days
+2025-10-04 21:40:26,715 - INFO - DATA_LOADING_START - predict
+2025-10-04 21:40:26,863 - INFO - DATA_LOADING_SUCCESS - News: 2030, Candles: 1745, Tickers: 19
+2025-10-04 21:40:26,863 - INFO - DATA_PREPROCESSING_START
+2025-10-04 21:40:26,867 - INFO - DUPLICATE_REMOVAL - Removed: 0
+2025-10-04 21:40:26,867 - INFO - FEATURE_ENGINEERING - Creating advanced features
+2025-10-04 21:40:27,057 - INFO - TICKER_ASSIGNMENT
+2025-10-04 21:40:27,266 - INFO - TICKER_ASSIGNMENT - Assigned: 1890, Coverage: 93.1%
+2025-10-04 21:40:27,266 - INFO - NEWS_FEATURES_CREATION
+2025-10-04 21:40:27,437 - INFO - DATA_MERGING
+2025-10-04 21:40:27,439 - INFO - DATA_MERGING - Successfully merged with news features
+2025-10-04 21:40:27,440 - INFO - DATA_MERGING - Final shape: (1745, 42)
+2025-10-04 21:40:27,440 - INFO - FEATURE_ENGINEERING - Adding market features
+2025-10-04 21:40:27,443 - INFO - DATA_PREPROCESSING_SUCCESS
+2025-10-04 21:40:27,443 - INFO - FEATURE_PREPARATION
+2025-10-04 21:40:27,443 - INFO - FEATURE_PREPARATION - Available features: 42
+2025-10-04 21:40:27,445 - INFO - FEATURE_PREPARATION - NaN values: 5111
+2025-10-04 21:40:27,445 - INFO - FEATURE_IMPUTATION - Applying median imputation
+2025-10-04 21:40:27,451 - INFO - FEATURE_PREPARATION - Scaling features
+2025-10-04 21:40:27,453 - INFO - FEATURE_PREPARATION - Final shape: (1745, 42)
+2025-10-04 21:40:27,492 - INFO - PREDICTION_SUCCESS - Tickers: 19, Mean return: -0.002296, Mean probability: 0.293
+2025-10-04 21:40:27,492 - INFO - PREDICTION_SUCCESS - Saved to: ./predictions/predictions_20d.csv
+2025-10-04 21:40:27,496 - INFO - FINAL_PREDICTIONS_SAVED - Path: ./predictions/summit.csv
+2025-10-04 21:40:27,496 - INFO - FINAL_PREDICTIONS_SAVED - Columns: ['ticker', 'return_1d', 'up_prob_1d', 'return_20d', 'up_prob_20d']
+2025-10-04 21:40:27,496 - INFO - PREDICTION_STATISTICS
+2025-10-04 21:40:27,496 - INFO - PREDICTION_STATISTICS - Tickers predicted: 19
+2025-10-04 21:40:27,496 - INFO - PREDICTION_STATISTICS - 1-day return range: [-0.0238, 0.0153]
+2025-10-04 21:40:27,496 - INFO - PREDICTION_STATISTICS - 1-day probability range: [0.114, 0.602]
+2025-10-04 21:40:27,497 - INFO - PREDICTION_STATISTICS - 20-day return range: [-0.0238, 0.0153]
+2025-10-04 21:40:27,497 - INFO - PREDICTION_STATISTICS - 20-day probability range: [0.114, 0.602]
+2025-10-04 21:40:27,497 - INFO - TRAINING_SCRIPT_SUCCESS
+2025-10-04 21:40:53,495 - INFO - ARTIFACTS_LOADING
+2025-10-04 21:40:53,496 - INFO - ARTIFACTS_LOADING
+2025-10-04 21:40:55,901 - INFO - ARTIFACTS_LOADING
+2025-10-04 21:40:55,901 - INFO - PREDICTION_GENERATION_START
+2025-10-04 21:40:55,901 - INFO - SUBMIT_FILE_CREATION
+2025-10-04 21:40:55,902 - INFO - DATA_LOADING_START - predict
+2025-10-04 21:40:56,095 - INFO - DATA_LOADING_SUCCESS - News: 2030, Candles: 1745, Tickers: 19
+2025-10-04 21:40:56,095 - INFO - DATA_PREPROCESSING_START
+2025-10-04 21:40:56,101 - INFO - DUPLICATE_REMOVAL - Removed: 0
+2025-10-04 21:40:56,101 - INFO - FEATURE_ENGINEERING - Creating advanced features
+2025-10-04 21:40:56,647 - INFO - TICKER_ASSIGNMENT
+2025-10-04 21:40:57,246 - INFO - TICKER_ASSIGNMENT - Assigned: 1890, Coverage: 93.1%
+2025-10-04 21:40:57,246 - INFO - NEWS_FEATURES_CREATION
+2025-10-04 21:40:57,704 - INFO - DATA_MERGING
+2025-10-04 21:40:57,713 - INFO - DATA_MERGING - Successfully merged with news features
+2025-10-04 21:40:57,715 - INFO - DATA_MERGING - Final shape: (1745, 42)
+2025-10-04 21:40:57,715 - INFO - FEATURE_ENGINEERING - Adding market features
+2025-10-04 21:40:57,727 - INFO - DATA_PREPROCESSING_SUCCESS
+2025-10-04 21:40:57,727 - INFO - FEATURE_PREPARATION
+2025-10-04 21:40:57,728 - INFO - FEATURE_PREPARATION - Available features: 42
+2025-10-04 21:40:57,733 - INFO - FEATURE_PREPARATION - NaN values: 5111
+2025-10-04 21:40:57,733 - INFO - FEATURE_IMPUTATION - Applying median imputation
+2025-10-04 21:40:57,747 - INFO - FEATURE_PREPARATION - Scaling features
+2025-10-04 21:40:57,752 - INFO - FEATURE_PREPARATION - Final shape: (1745, 42)
+2025-10-04 21:40:57,752 - INFO - DAILY_PREDICTIONS - Processing: AFLT
+2025-10-04 21:40:57,766 - INFO - DAILY_PREDICTIONS - Processing: ALRS
+2025-10-04 21:40:57,779 - INFO - DAILY_PREDICTIONS - Processing: CHMF
+2025-10-04 21:40:57,791 - INFO - DAILY_PREDICTIONS - Processing: GAZP
+2025-10-04 21:40:57,802 - INFO - DAILY_PREDICTIONS - Processing: GMKN
+2025-10-04 21:40:57,813 - INFO - DAILY_PREDICTIONS - Processing: LKOH
+2025-10-04 21:40:57,824 - INFO - DAILY_PREDICTIONS - Processing: MAGN
+2025-10-04 21:40:57,835 - INFO - DAILY_PREDICTIONS - Processing: MGNT
+2025-10-04 21:40:57,845 - INFO - DAILY_PREDICTIONS - Processing: MOEX
+2025-10-04 21:40:57,856 - INFO - DAILY_PREDICTIONS - Processing: MTSS
+2025-10-04 21:40:57,866 - INFO - DAILY_PREDICTIONS - Processing: NVTK
+2025-10-04 21:40:57,876 - INFO - DAILY_PREDICTIONS - Processing: PHOR
+2025-10-04 21:40:57,887 - INFO - DAILY_PREDICTIONS - Processing: PLZL
+2025-10-04 21:40:57,897 - INFO - DAILY_PREDICTIONS - Processing: ROSN
+2025-10-04 21:40:57,908 - INFO - DAILY_PREDICTIONS - Processing: RUAL
+2025-10-04 21:40:57,919 - INFO - DAILY_PREDICTIONS - Processing: SBER
+2025-10-04 21:40:57,931 - INFO - DAILY_PREDICTIONS - Processing: SIBN
+2025-10-04 21:40:57,943 - INFO - DAILY_PREDICTIONS - Processing: T
+2025-10-04 21:40:57,954 - INFO - DAILY_PREDICTIONS - Processing: VTBR
+2025-10-04 21:40:57,972 - INFO - SUBMIT_FILE_CREATION - File created: ./predictions/submission.csv
+2025-10-04 21:40:57,972 - INFO - SUBMIT_FILE_CREATION - Tickers processed: 19
+2025-10-04 21:40:57,972 - INFO - SUBMIT_FILE_CREATION - Day 1: mean=0.293
+2025-10-04 21:40:57,972 - INFO - SUBMIT_FILE_CREATION - Day 2: mean=0.293
+2025-10-04 21:40:57,973 - INFO - SUBMIT_FILE_CREATION - Day 3: mean=0.295
+2025-10-04 21:40:57,973 - INFO - SUBMIT_FILE_CREATION - Day 4: mean=0.299
+2025-10-04 21:40:57,973 - INFO - SUBMIT_FILE_CREATION - Day 5: mean=0.290
+2025-10-04 21:40:57,973 - INFO - SUBMIT_FILE_CREATION - Day 6: mean=0.298
+2025-10-04 21:40:57,973 - INFO - SUBMIT_FILE_CREATION - Day 7: mean=0.291
+2025-10-04 21:40:57,974 - INFO - SUBMIT_FILE_CREATION - Day 8: mean=0.297
+2025-10-04 21:40:57,974 - INFO - SUBMIT_FILE_CREATION - Day 9: mean=0.291
+2025-10-04 21:40:57,974 - INFO - SUBMIT_FILE_CREATION - Day 10: mean=0.294
+2025-10-04 21:40:57,974 - INFO - SUBMIT_FILE_CREATION - Day 11: mean=0.295
+2025-10-04 21:40:57,974 - INFO - SUBMIT_FILE_CREATION - Day 12: mean=0.296
+2025-10-04 21:40:57,975 - INFO - SUBMIT_FILE_CREATION - Day 13: mean=0.299
+2025-10-04 21:40:57,975 - INFO - SUBMIT_FILE_CREATION - Day 14: mean=0.296
+2025-10-04 21:40:57,975 - INFO - SUBMIT_FILE_CREATION - Day 15: mean=0.289
+2025-10-04 21:40:57,975 - INFO - SUBMIT_FILE_CREATION - Day 16: mean=0.290
+2025-10-04 21:40:57,976 - INFO - SUBMIT_FILE_CREATION - Day 17: mean=0.291
+2025-10-04 21:40:57,976 - INFO - SUBMIT_FILE_CREATION - Day 18: mean=0.292
+2025-10-04 21:40:57,976 - INFO - SUBMIT_FILE_CREATION - Day 19: mean=0.289
+2025-10-04 21:40:57,976 - INFO - SUBMIT_FILE_CREATION - Day 20: mean=0.291
+2025-10-04 21:40:57,976 - INFO - SUBMIT_FILE_CREATION - Overall stats: mean=0.293, min=0.100, max=0.651
+2025-10-04 21:40:57,976 - INFO - SUBMIT_FILE_CREATION - First 3 rows sample:
+2025-10-04 21:40:57,977 - INFO - SUBMIT_FILE_CREATION - AFLT: p1-p5 = ['0.169', '0.179', '0.166', '0.182', '0.199']
+2025-10-04 21:40:57,978 - INFO - SUBMIT_FILE_CREATION - ALRS: p1-p5 = ['0.115', '0.100', '0.144', '0.110', '0.116']
+2025-10-04 21:40:57,979 - INFO - SUBMIT_FILE_CREATION - CHMF: p1-p5 = ['0.194', '0.167', '0.198', '0.209', '0.197']
+2025-10-04 21:40:57,979 - INFO - PREDICTION_SCRIPT_SUCCESS
+2025-10-04 21:54:29,607 - INFO - TRAINING_PROCESS_START
+2025-10-04 21:54:29,607 - INFO - MODEL_TRAINING_START
+2025-10-04 21:54:29,607 - INFO - DATA_LOADING_START - train
+2025-10-04 21:54:31,380 - INFO - DATA_LOADING_SUCCESS - News: 25425, Candles: 20009, Tickers: 19
+2025-10-04 21:54:31,380 - INFO - DATA_PREPROCESSING_START
+2025-10-04 21:54:31,393 - INFO - DUPLICATE_REMOVAL - Removed: 38
+2025-10-04 21:54:31,394 - INFO - FEATURE_ENGINEERING - Creating advanced features
+2025-10-04 21:54:31,737 - INFO - TICKER_ASSIGNMENT
+2025-10-04 21:54:34,404 - INFO - TICKER_ASSIGNMENT - Assigned: 23364, Coverage: 91.9%
+2025-10-04 21:54:34,405 - INFO - NEWS_FEATURES_CREATION
+2025-10-04 21:54:35,783 - INFO - DATA_MERGING
+2025-10-04 21:54:35,799 - INFO - DATA_MERGING - Successfully merged with news features
+2025-10-04 21:54:35,800 - INFO - DATA_MERGING - Final shape: (19971, 42)
+2025-10-04 21:54:35,800 - INFO - FEATURE_ENGINEERING - Adding market features
+2025-10-04 21:54:35,815 - INFO - DATA_PREPROCESSING_SUCCESS
+2025-10-04 21:54:35,816 - INFO - PLOTS_GENERATION
+2025-10-04 21:54:35,816 - INFO - PLOTS_GENERATION - Plots directory created
+2025-10-04 21:54:35,816 - INFO - TARGET_CREATION
+2025-10-04 21:54:35,816 - INFO - TARGET_CREATION - Horizons: [1, 20]
+2025-10-04 21:54:35,836 - INFO - TARGET_CREATION - Created target for 1 days
+2025-10-04 21:54:35,845 - INFO - TARGET_CREATION - Created target for 20 days
+2025-10-04 21:54:35,849 - INFO - TARGET_CREATION - Removed: 380, Final: 19591
+2025-10-04 21:54:35,849 - INFO - FEATURE_PREPARATION
+2025-10-04 21:54:35,854 - INFO - FEATURE_PREPARATION - Available features: 42
+2025-10-04 21:54:35,860 - INFO - FEATURE_PREPARATION - NaN values: 5111
+2025-10-04 21:54:35,860 - INFO - FEATURE_IMPUTATION - Applying median imputation
+2025-10-04 21:54:35,944 - INFO - FEATURE_PREPARATION - Scaling features
+2025-10-04 21:54:35,955 - INFO - FEATURE_PREPARATION - Final shape: (19591, 42)
+2025-10-04 21:54:35,955 - INFO - TARGET_CREATION - Returns mean: 0.000397, std: 0.022913
+2025-10-04 21:54:35,956 - INFO - TARGET_CREATION - Up probability: 0.496
+2025-10-04 21:54:35,956 - INFO - MODEL_INITIALIZATION
+2025-10-04 21:54:35,956 - INFO - RETURN_MODEL_TRAINING
+2025-10-04 21:55:43,467 - INFO - CROSS_VALIDATION - rf: -0.0005
+2025-10-04 21:58:27,356 - INFO - TRAINING_PROCESS_START
+2025-10-04 21:58:27,356 - INFO - MODEL_TRAINING_START
+2025-10-04 21:58:27,356 - INFO - DATA_LOADING_START - train
+2025-10-04 21:58:29,580 - INFO - DATA_LOADING_SUCCESS - News: 25425, Candles: 20009, Tickers: 19
+2025-10-04 21:58:29,580 - INFO - DATA_PREPROCESSING_START
+2025-10-04 21:58:29,593 - INFO - DUPLICATE_REMOVAL - Removed: 38
+2025-10-04 21:58:29,593 - INFO - FEATURE_ENGINEERING - Creating advanced features
+2025-10-04 21:58:29,819 - INFO - TICKER_ASSIGNMENT
+2025-10-04 21:58:32,185 - INFO - TICKER_ASSIGNMENT - Assigned: 23364, Coverage: 91.9%
+2025-10-04 21:58:32,186 - INFO - NEWS_FEATURES_CREATION
+2025-10-04 21:58:33,955 - INFO - DATA_MERGING
+2025-10-04 21:58:33,972 - INFO - DATA_MERGING - Successfully merged with news features
+2025-10-04 21:58:33,973 - INFO - DATA_MERGING - Final shape: (19971, 42)
+2025-10-04 21:58:33,973 - INFO - FEATURE_ENGINEERING - Adding market features
+2025-10-04 21:58:33,983 - INFO - DATA_PREPROCESSING_SUCCESS
+2025-10-04 21:58:33,983 - INFO - PLOTS_GENERATION
+2025-10-04 21:58:45,017 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-10-04 21:58:45,018 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-10-04 21:58:50,891 - INFO - PLOTS_GENERATION - All plots saved to: ./reports/plots
+2025-10-04 21:58:50,891 - INFO - TARGET_CREATION
+2025-10-04 21:58:50,891 - INFO - TARGET_CREATION - Horizons: [1, 20]
+2025-10-04 21:58:50,909 - INFO - TARGET_CREATION - Created target for 1 days
+2025-10-04 21:58:50,917 - INFO - TARGET_CREATION - Created target for 20 days
+2025-10-04 21:58:50,922 - INFO - TARGET_CREATION - Removed: 380, Final: 19591
+2025-10-04 21:58:50,922 - INFO - FEATURE_PREPARATION
+2025-10-04 21:58:50,928 - INFO - FEATURE_PREPARATION - Available features: 43
+2025-10-04 21:58:50,933 - INFO - FEATURE_PREPARATION - NaN values: 5111
+2025-10-04 21:58:50,933 - INFO - FEATURE_IMPUTATION - Applying median imputation
+2025-10-04 21:58:51,019 - INFO - FEATURE_PREPARATION - Scaling features
+2025-10-04 21:58:51,035 - INFO - FEATURE_PREPARATION - Final shape: (19591, 43)
+2025-10-04 21:58:51,036 - INFO - TARGET_CREATION - Returns mean: 0.000397, std: 0.022913
+2025-10-04 21:58:51,036 - INFO - TARGET_CREATION - Up probability: 0.496
+2025-10-04 21:58:51,036 - INFO - MODEL_INITIALIZATION
+2025-10-04 21:58:51,036 - INFO - RETURN_MODEL_TRAINING
+2025-10-04 21:59:55,484 - INFO - CROSS_VALIDATION - rf: -0.0005
+2025-10-04 22:04:16,673 - INFO - CROSS_VALIDATION - gbm: -0.0005
+2025-10-04 22:04:21,572 - INFO - CROSS_VALIDATION - xgb: -0.0005
+2025-10-04 22:04:21,573 - INFO - ENSEMBLE_TRAINING - Best model: xgb with score: -0.0005
+2025-10-04 22:04:22,519 - INFO - PROB_MODEL_TRAINING
+2025-10-04 22:04:29,743 - INFO - CROSS_VALIDATION - rf: 0.5362
+2025-10-04 22:04:31,983 - INFO - CROSS_VALIDATION - xgb: 0.5540
+2025-10-04 22:04:31,983 - INFO - ENSEMBLE_TRAINING - Best model: xgb with score: 0.5540
+2025-10-04 22:04:32,878 - INFO - TRAINING_PERFORMANCE - MAE: 0.008679, RMSE: 0.011825, Accuracy: 0.959
+2025-10-04 22:04:32,880 - INFO - TRAINING_PERFORMANCE - Top 10 features:
+2025-10-04 22:04:32,880 - INFO - TRAINING_PERFORMANCE - market_avg_close: 0.0922
+2025-10-04 22:04:32,881 - INFO - TRAINING_PERFORMANCE - volatility_5d: 0.0416
+2025-10-04 22:04:32,881 - INFO - TRAINING_PERFORMANCE - close_open_ratio: 0.0379
+2025-10-04 22:04:32,881 - INFO - TRAINING_PERFORMANCE - returns_10d: 0.0362
+2025-10-04 22:04:32,881 - INFO - TRAINING_PERFORMANCE - news_count: 0.0354
+2025-10-04 22:04:32,881 - INFO - TRAINING_PERFORMANCE - volume_ratio_20: 0.0324
+2025-10-04 22:04:32,881 - INFO - TRAINING_PERFORMANCE - high_low_ratio: 0.0317
+2025-10-04 22:04:32,881 - INFO - TRAINING_PERFORMANCE - volume_ratio_10: 0.0311
+2025-10-04 22:04:32,882 - INFO - TRAINING_PERFORMANCE - returns_2d: 0.0311
+2025-10-04 22:04:32,882 - INFO - TRAINING_PERFORMANCE - volume_ratio_5: 0.0304
+2025-10-04 22:04:32,882 - INFO - PLOTS_GENERATION
+2025-10-04 22:04:38,539 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-10-04 22:04:38,540 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-10-04 22:04:42,970 - INFO - PLOTS_GENERATION - All plots saved to: ./reports/plots
+2025-10-04 22:04:42,970 - INFO - MODEL_TRAINING_SUCCESS
+2025-10-04 22:04:42,971 - INFO - ARTIFACTS_SAVING
+2025-10-04 22:04:42,971 - INFO - ARTIFACTS_SAVING
+2025-10-04 22:04:42,984 - INFO - ARTIFACTS_SAVING - Path: ./models/model_artifacts.joblib
+2025-10-04 22:04:42,984 - INFO - VALIDATION_PREDICTIONS_START
+2025-10-04 22:04:42,984 - INFO - PREDICTION_HORIZON_START - 1 day
+2025-10-04 22:04:42,984 - INFO - PREDICTION_START - Horizon: 1 days
+2025-10-04 22:04:42,984 - INFO - DATA_LOADING_START - predict
+2025-10-04 22:04:43,142 - INFO - DATA_LOADING_SUCCESS - News: 2030, Candles: 1745, Tickers: 19
+2025-10-04 22:04:43,142 - INFO - DATA_PREPROCESSING_START
+2025-10-04 22:04:43,145 - INFO - DUPLICATE_REMOVAL - Removed: 0
+2025-10-04 22:04:43,145 - INFO - FEATURE_ENGINEERING - Creating advanced features
+2025-10-04 22:04:43,325 - INFO - TICKER_ASSIGNMENT
+2025-10-04 22:04:43,482 - INFO - TICKER_ASSIGNMENT - Assigned: 1890, Coverage: 93.1%
+2025-10-04 22:04:43,482 - INFO - NEWS_FEATURES_CREATION
+2025-10-04 22:04:43,610 - INFO - DATA_MERGING
+2025-10-04 22:04:43,613 - INFO - DATA_MERGING - Successfully merged with news features
+2025-10-04 22:04:43,614 - INFO - DATA_MERGING - Final shape: (1745, 42)
+2025-10-04 22:04:43,614 - INFO - FEATURE_ENGINEERING - Adding market features
+2025-10-04 22:04:43,618 - INFO - DATA_PREPROCESSING_SUCCESS
+2025-10-04 22:04:43,618 - INFO - FEATURE_PREPARATION
+2025-10-04 22:04:43,618 - INFO - FEATURE_PREPARATION - Available features: 42
+2025-10-04 22:04:43,620 - INFO - FEATURE_PREPARATION - NaN values: 5111
+2025-10-04 22:04:43,620 - INFO - FEATURE_IMPUTATION - Applying median imputation
+2025-10-04 22:04:43,627 - INFO - FEATURE_PREPARATION - Scaling features
+2025-10-04 22:04:43,629 - INFO - FEATURE_PREPARATION - Final shape: (1745, 42)
+2025-10-04 22:04:43,637 - ERROR - TRAINING_SCRIPT_ERROR - feature_names mismatch: ['open', 'close', 'high', 'low', 'volume', 'returns_1d', 'returns_2d', 'returns_3d', 'returns_5d', 'returns_10d', 'returns_20d', 'volatility_5d', 'volatility_5d_adj', 'volatility_10d', 'volatility_10d_adj', 'volatility_20d', 'volatility_20d_adj', 'sma_5', 'ema_5', 'sma_10', 'ema_10', 'sma_20', 'ema_20', 'sma_50', 'ema_50', 'rsi_14', 'macd', 'macd_signal', 'high_low_ratio', 'close_open_ratio', 'volume_sma_5', 'volume_ratio_5', 'volume_sma_10', 'volume_ratio_10', 'volume_sma_20', 'volume_ratio_20', 'news_count', 'has_news', 'news_volume', 'market_cap_proxy', 'market_avg_close', 'relative_strength', 'has_news_binary'] ['open', 'close', 'high', 'low', 'volume', 'returns_1d', 'returns_2d', 'returns_3d', 'returns_5d', 'returns_10d', 'returns_20d', 'volatility_5d', 'volatility_5d_adj', 'volatility_10d', 'volatility_10d_adj', 'volatility_20d', 'volatility_20d_adj', 'sma_5', 'ema_5', 'sma_10', 'ema_10', 'sma_20', 'ema_20', 'sma_50', 'ema_50', 'rsi_14', 'macd', 'macd_signal', 'high_low_ratio', 'close_open_ratio', 'volume_sma_5', 'volume_ratio_5', 'volume_sma_10', 'volume_ratio_10', 'volume_sma_20', 'volume_ratio_20', 'news_count', 'has_news', 'news_volume', 'market_cap_proxy', 'market_avg_close', 'relative_strength']
+expected has_news_binary in input data
+2025-10-04 22:04:43,639 - ERROR - TRAINING_SCRIPT_ERROR - Traceback: Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\finam\train.py", line 51, in main
+    pred_1d = model.predict(k_days=1)
+  File "C:\Users\USER\Desktop\finam\model.py", line 900, in predict
+    return_predictions = self.return_model.predict(X)
+  File "C:\Users\USER\Desktop\finam\venv\lib\site-packages\xgboost\sklearn.py", line 1248, in predict
+    predts = self.get_booster().inplace_predict(
+  File "C:\Users\USER\Desktop\finam\venv\lib\site-packages\xgboost\core.py", line 2514, in inplace_predict
+    self._validate_features(fns)
+  File "C:\Users\USER\Desktop\finam\venv\lib\site-packages\xgboost\core.py", line 3079, in _validate_features
+    raise ValueError(msg.format(self.feature_names, feature_names))
+ValueError: feature_names mismatch: ['open', 'close', 'high', 'low', 'volume', 'returns_1d', 'returns_2d', 'returns_3d', 'returns_5d', 'returns_10d', 'returns_20d', 'volatility_5d', 'volatility_5d_adj', 'volatility_10d', 'volatility_10d_adj', 'volatility_20d', 'volatility_20d_adj', 'sma_5', 'ema_5', 'sma_10', 'ema_10', 'sma_20', 'ema_20', 'sma_50', 'ema_50', 'rsi_14', 'macd', 'macd_signal', 'high_low_ratio', 'close_open_ratio', 'volume_sma_5', 'volume_ratio_5', 'volume_sma_10', 'volume_ratio_10', 'volume_sma_20', 'volume_ratio_20', 'news_count', 'has_news', 'news_volume', 'market_cap_proxy', 'market_avg_close', 'relative_strength', 'has_news_binary'] ['open', 'close', 'high', 'low', 'volume', 'returns_1d', 'returns_2d', 'returns_3d', 'returns_5d', 'returns_10d', 'returns_20d', 'volatility_5d', 'volatility_5d_adj', 'volatility_10d', 'volatility_10d_adj', 'volatility_20d', 'volatility_20d_adj', 'sma_5', 'ema_5', 'sma_10', 'ema_10', 'sma_20', 'ema_20', 'sma_50', 'ema_50', 'rsi_14', 'macd', 'macd_signal', 'high_low_ratio', 'close_open_ratio', 'volume_sma_5', 'volume_ratio_5', 'volume_sma_10', 'volume_ratio_10', 'volume_sma_20', 'volume_ratio_20', 'news_count', 'has_news', 'news_volume', 'market_cap_proxy', 'market_avg_close', 'relative_strength']
+expected has_news_binary in input data
+
+2025-10-04 22:05:54,808 - INFO - ARTIFACTS_LOADING
+2025-10-04 22:05:54,808 - INFO - ARTIFACTS_LOADING
+2025-10-04 22:05:55,957 - INFO - ARTIFACTS_LOADING
+2025-10-04 22:05:55,957 - INFO - PREDICTION_GENERATION_START
+2025-10-04 22:05:55,957 - INFO - SUBMIT_FILE_CREATION
+2025-10-04 22:05:55,957 - INFO - DATA_LOADING_START - predict
+2025-10-04 22:05:56,118 - INFO - DATA_LOADING_SUCCESS - News: 2030, Candles: 1745, Tickers: 19
+2025-10-04 22:05:56,118 - INFO - DATA_PREPROCESSING_START
+2025-10-04 22:05:56,122 - INFO - DUPLICATE_REMOVAL - Removed: 0
+2025-10-04 22:05:56,122 - INFO - FEATURE_ENGINEERING - Creating advanced features
+2025-10-04 22:05:56,305 - INFO - TICKER_ASSIGNMENT
+2025-10-04 22:05:56,459 - INFO - TICKER_ASSIGNMENT - Assigned: 1890, Coverage: 93.1%
+2025-10-04 22:05:56,459 - INFO - NEWS_FEATURES_CREATION
+2025-10-04 22:05:56,593 - INFO - DATA_MERGING
+2025-10-04 22:05:56,596 - INFO - DATA_MERGING - Successfully merged with news features
+2025-10-04 22:05:56,596 - INFO - DATA_MERGING - Final shape: (1745, 42)
+2025-10-04 22:05:56,596 - INFO - FEATURE_ENGINEERING - Adding market features
+2025-10-04 22:05:56,599 - INFO - DATA_PREPROCESSING_SUCCESS
+2025-10-04 22:05:56,599 - INFO - FEATURE_PREPARATION
+2025-10-04 22:05:56,600 - INFO - FEATURE_PREPARATION - Available features: 42
+2025-10-04 22:05:56,601 - INFO - FEATURE_PREPARATION - NaN values: 5111
+2025-10-04 22:05:56,601 - INFO - FEATURE_IMPUTATION - Applying median imputation
+2025-10-04 22:05:56,608 - INFO - FEATURE_PREPARATION - Scaling features
+2025-10-04 22:05:56,610 - INFO - FEATURE_PREPARATION - Final shape: (1745, 42)
+2025-10-04 22:05:56,610 - INFO - DAILY_PREDICTIONS - Processing: AFLT
+2025-10-04 22:05:56,612 - INFO - DAILY_PREDICTIONS - Processing: ALRS
+2025-10-04 22:05:56,614 - INFO - DAILY_PREDICTIONS - Processing: CHMF
+2025-10-04 22:05:56,615 - INFO - DAILY_PREDICTIONS - Processing: GAZP
+2025-10-04 22:05:56,616 - INFO - DAILY_PREDICTIONS - Processing: GMKN
+2025-10-04 22:05:56,617 - INFO - DAILY_PREDICTIONS - Processing: LKOH
+2025-10-04 22:05:56,619 - INFO - DAILY_PREDICTIONS - Processing: MAGN
+2025-10-04 22:05:56,620 - INFO - DAILY_PREDICTIONS - Processing: MGNT
+2025-10-04 22:05:56,621 - INFO - DAILY_PREDICTIONS - Processing: MOEX
+2025-10-04 22:05:56,623 - INFO - DAILY_PREDICTIONS - Processing: MTSS
+2025-10-04 22:05:56,624 - INFO - DAILY_PREDICTIONS - Processing: NVTK
+2025-10-04 22:05:56,625 - INFO - DAILY_PREDICTIONS - Processing: PHOR
+2025-10-04 22:05:56,626 - INFO - DAILY_PREDICTIONS - Processing: PLZL
+2025-10-04 22:05:56,628 - INFO - DAILY_PREDICTIONS - Processing: ROSN
+2025-10-04 22:05:56,629 - INFO - DAILY_PREDICTIONS - Processing: RUAL
+2025-10-04 22:05:56,630 - INFO - DAILY_PREDICTIONS - Processing: SBER
+2025-10-04 22:05:56,632 - INFO - DAILY_PREDICTIONS - Processing: SIBN
+2025-10-04 22:05:56,633 - INFO - DAILY_PREDICTIONS - Processing: T
+2025-10-04 22:05:56,634 - INFO - DAILY_PREDICTIONS - Processing: VTBR
+2025-10-04 22:05:56,640 - INFO - SUBMIT_FILE_CREATION - File created: ./predictions/submission.csv
+2025-10-04 22:05:56,640 - INFO - SUBMIT_FILE_CREATION - Tickers processed: 19
+2025-10-04 22:05:56,641 - INFO - SUBMIT_FILE_CREATION - Day 1: mean=0.500
+2025-10-04 22:05:56,641 - INFO - SUBMIT_FILE_CREATION - Day 2: mean=0.500
+2025-10-04 22:05:56,641 - INFO - SUBMIT_FILE_CREATION - Day 3: mean=0.500
+2025-10-04 22:05:56,641 - INFO - SUBMIT_FILE_CREATION - Day 4: mean=0.500
+2025-10-04 22:05:56,641 - INFO - SUBMIT_FILE_CREATION - Day 5: mean=0.500
+2025-10-04 22:05:56,641 - INFO - SUBMIT_FILE_CREATION - Day 6: mean=0.500
+2025-10-04 22:05:56,641 - INFO - SUBMIT_FILE_CREATION - Day 7: mean=0.500
+2025-10-04 22:05:56,641 - INFO - SUBMIT_FILE_CREATION - Day 8: mean=0.500
+2025-10-04 22:05:56,641 - INFO - SUBMIT_FILE_CREATION - Day 9: mean=0.500
+2025-10-04 22:05:56,642 - INFO - SUBMIT_FILE_CREATION - Day 10: mean=0.500
+2025-10-04 22:05:56,642 - INFO - SUBMIT_FILE_CREATION - Day 11: mean=0.500
+2025-10-04 22:05:56,642 - INFO - SUBMIT_FILE_CREATION - Day 12: mean=0.500
+2025-10-04 22:05:56,642 - INFO - SUBMIT_FILE_CREATION - Day 13: mean=0.500
+2025-10-04 22:05:56,642 - INFO - SUBMIT_FILE_CREATION - Day 14: mean=0.500
+2025-10-04 22:05:56,642 - INFO - SUBMIT_FILE_CREATION - Day 15: mean=0.500
+2025-10-04 22:05:56,642 - INFO - SUBMIT_FILE_CREATION - Day 16: mean=0.500
+2025-10-04 22:05:56,642 - INFO - SUBMIT_FILE_CREATION - Day 17: mean=0.500
+2025-10-04 22:05:56,642 - INFO - SUBMIT_FILE_CREATION - Day 18: mean=0.500
+2025-10-04 22:05:56,642 - INFO - SUBMIT_FILE_CREATION - Day 19: mean=0.500
+2025-10-04 22:05:56,642 - INFO - SUBMIT_FILE_CREATION - Day 20: mean=0.500
+2025-10-04 22:05:56,643 - INFO - SUBMIT_FILE_CREATION - Overall stats: mean=0.500, min=0.500, max=0.500
+2025-10-04 22:05:56,643 - INFO - SUBMIT_FILE_CREATION - First 3 rows sample:
+2025-10-04 22:05:56,643 - INFO - SUBMIT_FILE_CREATION - AFLT: p1-p5 = ['0.500', '0.500', '0.500', '0.500', '0.500']
+2025-10-04 22:05:56,643 - INFO - SUBMIT_FILE_CREATION - ALRS: p1-p5 = ['0.500', '0.500', '0.500', '0.500', '0.500']
+2025-10-04 22:05:56,644 - INFO - SUBMIT_FILE_CREATION - CHMF: p1-p5 = ['0.500', '0.500', '0.500', '0.500', '0.500']
+2025-10-04 22:05:56,644 - INFO - PREDICTION_SCRIPT_SUCCESS
+2025-10-04 22:08:53,378 - INFO - TRAINING_PROCESS_START
+2025-10-04 22:08:53,378 - INFO - MODEL_TRAINING_START
+2025-10-04 22:08:53,378 - INFO - DATA_LOADING_START - train
+2025-10-04 22:08:54,494 - INFO - DATA_LOADING_SUCCESS - News: 25425, Candles: 20009, Tickers: 19
+2025-10-04 22:08:54,494 - INFO - DATA_PREPROCESSING_START
+2025-10-04 22:08:54,503 - INFO - DUPLICATE_REMOVAL - Removed: 38
+2025-10-04 22:08:54,503 - INFO - FEATURE_ENGINEERING - Creating advanced features
+2025-10-04 22:08:54,710 - INFO - TICKER_ASSIGNMENT
+2025-10-04 22:08:56,379 - INFO - TICKER_ASSIGNMENT - Assigned: 23364, Coverage: 91.9%
+2025-10-04 22:08:56,380 - INFO - NEWS_FEATURES_CREATION
+2025-10-04 22:08:57,287 - INFO - DATA_MERGING
+2025-10-04 22:08:57,298 - INFO - DATA_MERGING - Successfully merged with news features
+2025-10-04 22:08:57,299 - INFO - DATA_MERGING - Final shape: (19971, 42)
+2025-10-04 22:08:57,299 - INFO - FEATURE_ENGINEERING - Adding market features
+2025-10-04 22:08:57,309 - INFO - DATA_PREPROCESSING_SUCCESS
+2025-10-04 22:08:57,309 - INFO - PLOTS_GENERATION
+2025-10-04 22:09:03,299 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-10-04 22:09:03,300 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-10-04 22:09:06,906 - INFO - PLOTS_GENERATION - All plots saved to: ./reports/plots
+2025-10-04 22:09:06,906 - INFO - TARGET_CREATION
+2025-10-04 22:09:06,906 - INFO - TARGET_CREATION - Horizons: [1, 20]
+2025-10-04 22:09:06,921 - INFO - TARGET_CREATION - Created target for 1 days
+2025-10-04 22:09:06,927 - INFO - TARGET_CREATION - Created target for 20 days
+2025-10-04 22:09:06,930 - INFO - TARGET_CREATION - Removed: 380, Final: 19591
+2025-10-04 22:09:06,930 - INFO - FEATURE_PREPARATION
+2025-10-04 22:09:06,934 - INFO - FEATURE_PREPARATION - Available features: 43
+2025-10-04 22:09:06,938 - INFO - FEATURE_PREPARATION - NaN values: 5111
+2025-10-04 22:09:06,938 - INFO - FEATURE_IMPUTATION - Applying median imputation
+2025-10-04 22:09:07,006 - INFO - FEATURE_PREPARATION - Scaling features
+2025-10-04 22:09:07,016 - INFO - FEATURE_PREPARATION - Final shape: (19591, 43)
+2025-10-04 22:09:07,016 - INFO - TARGET_CREATION - Returns mean: 0.000397, std: 0.022913
+2025-10-04 22:09:07,017 - INFO - TARGET_CREATION - Up probability: 0.496
+2025-10-04 22:09:07,017 - INFO - MODEL_INITIALIZATION
+2025-10-04 22:09:07,017 - INFO - RETURN_MODEL_TRAINING
+2025-10-04 22:10:00,378 - INFO - CROSS_VALIDATION - rf: -0.0005
+2025-10-04 22:13:29,077 - INFO - CROSS_VALIDATION - gbm: -0.0005
+2025-10-04 22:13:33,960 - INFO - CROSS_VALIDATION - xgb: -0.0005
+2025-10-04 22:13:33,960 - INFO - ENSEMBLE_TRAINING - Best model: xgb with score: -0.0005
+2025-10-04 22:13:34,886 - INFO - PROB_MODEL_TRAINING
+2025-10-04 22:13:42,097 - INFO - CROSS_VALIDATION - rf: 0.5362
+2025-10-04 22:13:44,303 - INFO - CROSS_VALIDATION - xgb: 0.5540
+2025-10-04 22:13:44,304 - INFO - ENSEMBLE_TRAINING - Best model: xgb with score: 0.5540
+2025-10-04 22:13:45,176 - INFO - TRAINING_PERFORMANCE - MAE: 0.008679, RMSE: 0.011825, Accuracy: 0.959
+2025-10-04 22:13:45,178 - INFO - TRAINING_PERFORMANCE - Top 10 features:
+2025-10-04 22:13:45,178 - INFO - TRAINING_PERFORMANCE - market_avg_close: 0.0922
+2025-10-04 22:13:45,178 - INFO - TRAINING_PERFORMANCE - volatility_5d: 0.0416
+2025-10-04 22:13:45,179 - INFO - TRAINING_PERFORMANCE - close_open_ratio: 0.0379
+2025-10-04 22:13:45,179 - INFO - TRAINING_PERFORMANCE - returns_10d: 0.0362
+2025-10-04 22:13:45,179 - INFO - TRAINING_PERFORMANCE - news_count: 0.0354
+2025-10-04 22:13:45,179 - INFO - TRAINING_PERFORMANCE - volume_ratio_20: 0.0324
+2025-10-04 22:13:45,179 - INFO - TRAINING_PERFORMANCE - high_low_ratio: 0.0317
+2025-10-04 22:13:45,179 - INFO - TRAINING_PERFORMANCE - volume_ratio_10: 0.0311
+2025-10-04 22:13:45,179 - INFO - TRAINING_PERFORMANCE - returns_2d: 0.0311
+2025-10-04 22:13:45,179 - INFO - TRAINING_PERFORMANCE - volume_ratio_5: 0.0304
+2025-10-04 22:13:45,179 - INFO - PLOTS_GENERATION
+2025-10-04 22:13:50,886 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-10-04 22:13:50,887 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-10-04 22:13:55,244 - INFO - PLOTS_GENERATION - All plots saved to: ./reports/plots
+2025-10-04 22:13:55,244 - INFO - MODEL_TRAINING_SUCCESS
+2025-10-04 22:13:55,245 - INFO - ARTIFACTS_SAVING
+2025-10-04 22:13:55,245 - INFO - ARTIFACTS_SAVING
+2025-10-04 22:13:55,258 - INFO - ARTIFACTS_SAVING - Path: ./models/model_artifacts.joblib
+2025-10-04 22:13:55,258 - INFO - VALIDATION_PREDICTIONS_START
+2025-10-04 22:13:55,258 - INFO - PREDICTION_HORIZON_START - 1 day
+2025-10-04 22:13:55,258 - INFO - PREDICTION_START - Horizon: 1 days
+2025-10-04 22:13:55,259 - INFO - DATA_LOADING_START - predict
+2025-10-04 22:13:55,422 - INFO - DATA_LOADING_SUCCESS - News: 2030, Candles: 1745, Tickers: 19
+2025-10-04 22:13:55,422 - INFO - DATA_PREPROCESSING_START
+2025-10-04 22:13:55,425 - INFO - DUPLICATE_REMOVAL - Removed: 0
+2025-10-04 22:13:55,425 - INFO - FEATURE_ENGINEERING - Creating advanced features
+2025-10-04 22:13:55,602 - INFO - TICKER_ASSIGNMENT
+2025-10-04 22:13:55,760 - INFO - TICKER_ASSIGNMENT - Assigned: 1890, Coverage: 93.1%
+2025-10-04 22:13:55,760 - INFO - NEWS_FEATURES_CREATION
+2025-10-04 22:13:55,888 - INFO - DATA_MERGING
+2025-10-04 22:13:55,890 - INFO - DATA_MERGING - Successfully merged with news features
+2025-10-04 22:13:55,891 - INFO - DATA_MERGING - Final shape: (1745, 42)
+2025-10-04 22:13:55,892 - INFO - FEATURE_ENGINEERING - Adding market features
+2025-10-04 22:13:55,895 - INFO - DATA_PREPROCESSING_SUCCESS
+2025-10-04 22:13:55,895 - INFO - FEATURE_PREPARATION
+2025-10-04 22:13:55,896 - INFO - FEATURE_PREPARATION - Available features: 42
+2025-10-04 22:13:55,897 - INFO - FEATURE_PREPARATION - NaN values: 5111
+2025-10-04 22:13:55,897 - INFO - FEATURE_IMPUTATION - Applying median imputation
+2025-10-04 22:13:55,904 - INFO - FEATURE_PREPARATION - Scaling features
+2025-10-04 22:13:55,906 - INFO - FEATURE_PREPARATION - Final shape: (1745, 42)
+2025-10-04 22:13:55,914 - ERROR - TRAINING_SCRIPT_ERROR - feature_names mismatch: ['open', 'close', 'high', 'low', 'volume', 'returns_1d', 'returns_2d', 'returns_3d', 'returns_5d', 'returns_10d', 'returns_20d', 'volatility_5d', 'volatility_5d_adj', 'volatility_10d', 'volatility_10d_adj', 'volatility_20d', 'volatility_20d_adj', 'sma_5', 'ema_5', 'sma_10', 'ema_10', 'sma_20', 'ema_20', 'sma_50', 'ema_50', 'rsi_14', 'macd', 'macd_signal', 'high_low_ratio', 'close_open_ratio', 'volume_sma_5', 'volume_ratio_5', 'volume_sma_10', 'volume_ratio_10', 'volume_sma_20', 'volume_ratio_20', 'news_count', 'has_news', 'news_volume', 'market_cap_proxy', 'market_avg_close', 'relative_strength', 'has_news_binary'] ['open', 'close', 'high', 'low', 'volume', 'returns_1d', 'returns_2d', 'returns_3d', 'returns_5d', 'returns_10d', 'returns_20d', 'volatility_5d', 'volatility_5d_adj', 'volatility_10d', 'volatility_10d_adj', 'volatility_20d', 'volatility_20d_adj', 'sma_5', 'ema_5', 'sma_10', 'ema_10', 'sma_20', 'ema_20', 'sma_50', 'ema_50', 'rsi_14', 'macd', 'macd_signal', 'high_low_ratio', 'close_open_ratio', 'volume_sma_5', 'volume_ratio_5', 'volume_sma_10', 'volume_ratio_10', 'volume_sma_20', 'volume_ratio_20', 'news_count', 'has_news', 'news_volume', 'market_cap_proxy', 'market_avg_close', 'relative_strength']
+expected has_news_binary in input data
+2025-10-04 22:13:55,921 - ERROR - TRAINING_SCRIPT_ERROR - Traceback: Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\finam\train.py", line 51, in main
+    pred_1d = model.predict(k_days=1)
+  File "C:\Users\USER\Desktop\finam\model.py", line 900, in predict
+    return_predictions = self.return_model.predict(X)
+  File "C:\Users\USER\Desktop\finam\venv\lib\site-packages\xgboost\sklearn.py", line 1248, in predict
+    predts = self.get_booster().inplace_predict(
+  File "C:\Users\USER\Desktop\finam\venv\lib\site-packages\xgboost\core.py", line 2514, in inplace_predict
+    self._validate_features(fns)
+  File "C:\Users\USER\Desktop\finam\venv\lib\site-packages\xgboost\core.py", line 3079, in _validate_features
+    raise ValueError(msg.format(self.feature_names, feature_names))
+ValueError: feature_names mismatch: ['open', 'close', 'high', 'low', 'volume', 'returns_1d', 'returns_2d', 'returns_3d', 'returns_5d', 'returns_10d', 'returns_20d', 'volatility_5d', 'volatility_5d_adj', 'volatility_10d', 'volatility_10d_adj', 'volatility_20d', 'volatility_20d_adj', 'sma_5', 'ema_5', 'sma_10', 'ema_10', 'sma_20', 'ema_20', 'sma_50', 'ema_50', 'rsi_14', 'macd', 'macd_signal', 'high_low_ratio', 'close_open_ratio', 'volume_sma_5', 'volume_ratio_5', 'volume_sma_10', 'volume_ratio_10', 'volume_sma_20', 'volume_ratio_20', 'news_count', 'has_news', 'news_volume', 'market_cap_proxy', 'market_avg_close', 'relative_strength', 'has_news_binary'] ['open', 'close', 'high', 'low', 'volume', 'returns_1d', 'returns_2d', 'returns_3d', 'returns_5d', 'returns_10d', 'returns_20d', 'volatility_5d', 'volatility_5d_adj', 'volatility_10d', 'volatility_10d_adj', 'volatility_20d', 'volatility_20d_adj', 'sma_5', 'ema_5', 'sma_10', 'ema_10', 'sma_20', 'ema_20', 'sma_50', 'ema_50', 'rsi_14', 'macd', 'macd_signal', 'high_low_ratio', 'close_open_ratio', 'volume_sma_5', 'volume_ratio_5', 'volume_sma_10', 'volume_ratio_10', 'volume_sma_20', 'volume_ratio_20', 'news_count', 'has_news', 'news_volume', 'market_cap_proxy', 'market_avg_close', 'relative_strength']
+expected has_news_binary in input data
+
+2025-10-04 22:24:40,542 - ERROR - TRAINING_SCRIPT_ERROR - 'Config' object has no attribute 'seed'
+2025-10-04 22:24:40,542 - ERROR - TRAINING_SCRIPT_ERROR - Traceback: Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\finam\train.py", line 40, in main
+    model = PriceForecastModel()
+  File "C:\Users\USER\Desktop\finam\model.py", line 59, in __init__
+    self.set_seed()
+  File "C:\Users\USER\Desktop\finam\model.py", line 86, in set_seed
+    np.random.seed(self.config.seed)
+AttributeError: 'Config' object has no attribute 'seed'
+
+2025-10-04 22:25:45,059 - ERROR - TRAINING_SCRIPT_ERROR - 'Config' object has no attribute 'data_dir'
+2025-10-04 22:25:45,060 - ERROR - TRAINING_SCRIPT_ERROR - Traceback: Traceback (most recent call last):
+  File "C:\Users\USER\Desktop\finam\train.py", line 40, in main
+    model = PriceForecastModel()
+  File "C:\Users\USER\Desktop\finam\model.py", line 72, in __init__
+    self.create_directories()
+  File "C:\Users\USER\Desktop\finam\model.py", line 92, in create_directories
+    self.config.data_dir,
+AttributeError: 'Config' object has no attribute 'data_dir'
+
+2025-10-04 22:31:05,245 - INFO - TRAINING_PROCESS_START
+2025-10-04 22:31:05,245 - INFO - MODEL_TRAINING_START
+2025-10-04 22:31:05,245 - INFO - DATA_LOADING_START - train
+2025-10-04 22:31:06,357 - INFO - DATA_LOADING_SUCCESS - News: 25425, Candles: 20009, Tickers: 19
+2025-10-04 22:31:06,357 - INFO - DATA_PREPROCESSING_START
+2025-10-04 22:31:06,365 - INFO - DUPLICATE_REMOVAL - Removed: 38
+2025-10-04 22:31:06,365 - INFO - FEATURE_ENGINEERING - Creating advanced features
+2025-10-04 22:31:06,569 - INFO - TICKER_ASSIGNMENT
+2025-10-04 22:31:08,226 - INFO - TICKER_ASSIGNMENT - Assigned: 23364, Coverage: 91.9%
+2025-10-04 22:31:08,226 - INFO - NEWS_FEATURES_CREATION
+2025-10-04 22:31:09,128 - INFO - DATA_MERGING
+2025-10-04 22:31:09,139 - INFO - DATA_MERGING - Successfully merged with news features
+2025-10-04 22:31:09,140 - INFO - DATA_MERGING - Final shape: (19971, 43)
+2025-10-04 22:31:09,140 - INFO - FEATURE_ENGINEERING - Adding market features
+2025-10-04 22:31:09,150 - INFO - DATA_PREPROCESSING_SUCCESS
+2025-10-04 22:31:09,150 - INFO - PLOTS_GENERATION
+2025-10-04 22:31:14,750 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-10-04 22:31:14,751 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-10-04 22:31:18,310 - INFO - PLOTS_GENERATION - All plots saved to: ./reports/plots
+2025-10-04 22:31:18,311 - INFO - TARGET_CREATION
+2025-10-04 22:31:18,311 - INFO - TARGET_CREATION - Horizons: [1, 20]
+2025-10-04 22:31:18,325 - INFO - TARGET_CREATION - Created target for 1 days
+2025-10-04 22:31:18,332 - INFO - TARGET_CREATION - Created target for 20 days
+2025-10-04 22:31:18,335 - INFO - TARGET_CREATION - Removed: 380, Final: 19591
+2025-10-04 22:31:18,335 - INFO - FEATURE_PREPARATION
+2025-10-04 22:31:18,339 - INFO - FEATURE_PREPARATION - Available features: 43
+2025-10-04 22:31:18,343 - INFO - FEATURE_PREPARATION - NaN values: 5111
+2025-10-04 22:31:18,343 - INFO - FEATURE_IMPUTATION - Applying median imputation
+2025-10-04 22:31:18,412 - INFO - FEATURE_PREPARATION - Scaling features
+2025-10-04 22:31:18,420 - INFO - FEATURE_PREPARATION - Final shape: (19591, 43)
+2025-10-04 22:31:18,420 - INFO - TARGET_CREATION - Returns mean: 0.000397, std: 0.022913
+2025-10-04 22:31:18,420 - INFO - TARGET_CREATION - Up probability: 0.496
+2025-10-04 22:31:18,421 - INFO - MODEL_INITIALIZATION
+2025-10-04 22:31:18,421 - INFO - RETURN_MODEL_TRAINING
+2025-10-04 22:32:12,350 - INFO - CROSS_VALIDATION - rf: -0.0005
+2025-10-04 22:35:37,618 - INFO - CROSS_VALIDATION - gbm: -0.0005
+2025-10-04 22:35:42,464 - INFO - CROSS_VALIDATION - xgb: -0.0005
+2025-10-04 22:35:42,464 - INFO - ENSEMBLE_TRAINING - Best model: xgb with score: -0.0005
+2025-10-04 22:35:43,383 - INFO - PROB_MODEL_TRAINING
+2025-10-04 22:35:50,588 - INFO - CROSS_VALIDATION - rf: 0.5328
+2025-10-04 22:35:52,827 - INFO - CROSS_VALIDATION - xgb: 0.5540
+2025-10-04 22:35:52,827 - INFO - ENSEMBLE_TRAINING - Best model: xgb with score: 0.5540
+2025-10-04 22:35:53,692 - INFO - TRAINING_PERFORMANCE - MAE: 0.008679, RMSE: 0.011825, Accuracy: 0.959
+2025-10-04 22:35:53,694 - INFO - TRAINING_PERFORMANCE - Top 10 features:
+2025-10-04 22:35:53,694 - INFO - TRAINING_PERFORMANCE - market_avg_close: 0.0922
+2025-10-04 22:35:53,695 - INFO - TRAINING_PERFORMANCE - volatility_5d: 0.0416
+2025-10-04 22:35:53,695 - INFO - TRAINING_PERFORMANCE - close_open_ratio: 0.0379
+2025-10-04 22:35:53,695 - INFO - TRAINING_PERFORMANCE - returns_10d: 0.0362
+2025-10-04 22:35:53,695 - INFO - TRAINING_PERFORMANCE - news_count: 0.0354
+2025-10-04 22:35:53,695 - INFO - TRAINING_PERFORMANCE - volume_ratio_20: 0.0324
+2025-10-04 22:35:53,695 - INFO - TRAINING_PERFORMANCE - high_low_ratio: 0.0317
+2025-10-04 22:35:53,695 - INFO - TRAINING_PERFORMANCE - volume_ratio_10: 0.0311
+2025-10-04 22:35:53,695 - INFO - TRAINING_PERFORMANCE - returns_2d: 0.0311
+2025-10-04 22:35:53,696 - INFO - TRAINING_PERFORMANCE - volume_ratio_5: 0.0304
+2025-10-04 22:35:53,696 - INFO - PLOTS_GENERATION
+2025-10-04 22:35:59,376 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-10-04 22:35:59,376 - INFO - Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
+2025-10-04 22:36:03,721 - INFO - PLOTS_GENERATION - All plots saved to: ./reports/plots
+2025-10-04 22:36:03,721 - INFO - MODEL_TRAINING_SUCCESS
+2025-10-04 22:36:03,722 - INFO - ARTIFACTS_SAVING
+2025-10-04 22:36:03,722 - INFO - ARTIFACTS_SAVING
+2025-10-04 22:36:03,735 - INFO - ARTIFACTS_SAVING - Path: ./models/model_artifacts.joblib
+2025-10-04 22:36:03,735 - INFO - VALIDATION_PREDICTIONS_START
+2025-10-04 22:36:03,735 - INFO - PREDICTION_HORIZON_START - 1 day
+2025-10-04 22:36:03,735 - INFO - PREDICTION_START - Horizon: 1 days
+2025-10-04 22:36:03,735 - INFO - DATA_LOADING_START - predict
+2025-10-04 22:36:03,893 - INFO - DATA_LOADING_SUCCESS - News: 2030, Candles: 1745, Tickers: 19
+2025-10-04 22:36:03,893 - INFO - DATA_PREPROCESSING_START
+2025-10-04 22:36:03,896 - INFO - DUPLICATE_REMOVAL - Removed: 0
+2025-10-04 22:36:03,896 - INFO - FEATURE_ENGINEERING - Creating advanced features
+2025-10-04 22:36:04,071 - INFO - TICKER_ASSIGNMENT
+2025-10-04 22:36:04,228 - INFO - TICKER_ASSIGNMENT - Assigned: 1890, Coverage: 93.1%
+2025-10-04 22:36:04,228 - INFO - NEWS_FEATURES_CREATION
+2025-10-04 22:36:04,359 - INFO - DATA_MERGING
+2025-10-04 22:36:04,362 - INFO - DATA_MERGING - Successfully merged with news features
+2025-10-04 22:36:04,363 - INFO - DATA_MERGING - Final shape: (1745, 43)
+2025-10-04 22:36:04,364 - INFO - FEATURE_ENGINEERING - Adding market features
+2025-10-04 22:36:04,367 - INFO - DATA_PREPROCESSING_SUCCESS
+2025-10-04 22:36:04,367 - INFO - FEATURE_PREPARATION
+2025-10-04 22:36:04,368 - INFO - FEATURE_PREPARATION - Available features: 43
+2025-10-04 22:36:04,369 - INFO - FEATURE_PREPARATION - NaN values: 5111
+2025-10-04 22:36:04,369 - INFO - FEATURE_IMPUTATION - Applying median imputation
+2025-10-04 22:36:04,376 - INFO - FEATURE_PREPARATION - Scaling features
+2025-10-04 22:36:04,378 - INFO - FEATURE_PREPARATION - Final shape: (1745, 43)
+2025-10-04 22:36:04,406 - INFO - PREDICTION_SUCCESS - Tickers: 19, Mean return: -0.002296, Mean probability: 0.293
+2025-10-04 22:36:04,406 - INFO - PREDICTION_SUCCESS - Saved to: ./predictions/predictions_1d.csv
+2025-10-04 22:36:04,406 - INFO - PREDICTION_HORIZON_START - 20 days
+2025-10-04 22:36:04,406 - INFO - PREDICTION_START - Horizon: 20 days
+2025-10-04 22:36:04,406 - INFO - DATA_LOADING_START - predict
+2025-10-04 22:36:04,552 - INFO - DATA_LOADING_SUCCESS - News: 2030, Candles: 1745, Tickers: 19
+2025-10-04 22:36:04,553 - INFO - DATA_PREPROCESSING_START
+2025-10-04 22:36:04,555 - INFO - DUPLICATE_REMOVAL - Removed: 0
+2025-10-04 22:36:04,555 - INFO - FEATURE_ENGINEERING - Creating advanced features
+2025-10-04 22:36:04,727 - INFO - TICKER_ASSIGNMENT
+2025-10-04 22:36:04,882 - INFO - TICKER_ASSIGNMENT - Assigned: 1890, Coverage: 93.1%
+2025-10-04 22:36:04,882 - INFO - NEWS_FEATURES_CREATION
+2025-10-04 22:36:05,009 - INFO - DATA_MERGING
+2025-10-04 22:36:05,012 - INFO - DATA_MERGING - Successfully merged with news features
+2025-10-04 22:36:05,013 - INFO - DATA_MERGING - Final shape: (1745, 43)
+2025-10-04 22:36:05,013 - INFO - FEATURE_ENGINEERING - Adding market features
+2025-10-04 22:36:05,016 - INFO - DATA_PREPROCESSING_SUCCESS
+2025-10-04 22:36:05,016 - INFO - FEATURE_PREPARATION
+2025-10-04 22:36:05,016 - INFO - FEATURE_PREPARATION - Available features: 43
+2025-10-04 22:36:05,018 - INFO - FEATURE_PREPARATION - NaN values: 5111
+2025-10-04 22:36:05,018 - INFO - FEATURE_IMPUTATION - Applying median imputation
+2025-10-04 22:36:05,025 - INFO - FEATURE_PREPARATION - Scaling features
+2025-10-04 22:36:05,027 - INFO - FEATURE_PREPARATION - Final shape: (1745, 43)
+2025-10-04 22:36:05,054 - INFO - PREDICTION_SUCCESS - Tickers: 19, Mean return: -0.002296, Mean probability: 0.293
+2025-10-04 22:36:05,054 - INFO - PREDICTION_SUCCESS - Saved to: ./predictions/predictions_20d.csv
+2025-10-04 22:36:05,057 - INFO - FINAL_PREDICTIONS_SAVED - Path: ./predictions/summit.csv
+2025-10-04 22:36:05,057 - INFO - FINAL_PREDICTIONS_SAVED - Columns: ['ticker', 'return_1d', 'up_prob_1d', 'return_20d', 'up_prob_20d']
+2025-10-04 22:36:05,057 - INFO - PREDICTION_STATISTICS
+2025-10-04 22:36:05,057 - INFO - PREDICTION_STATISTICS - Tickers predicted: 19
+2025-10-04 22:36:05,057 - INFO - PREDICTION_STATISTICS - 1-day return range: [-0.0238, 0.0153]
+2025-10-04 22:36:05,058 - INFO - PREDICTION_STATISTICS - 1-day probability range: [0.114, 0.602]
+2025-10-04 22:36:05,058 - INFO - PREDICTION_STATISTICS - 20-day return range: [-0.0238, 0.0153]
+2025-10-04 22:36:05,058 - INFO - PREDICTION_STATISTICS - 20-day probability range: [0.114, 0.602]
+2025-10-04 22:36:05,058 - INFO - TRAINING_SCRIPT_SUCCESS
+2025-10-04 22:37:53,618 - INFO - ARTIFACTS_LOADING
+2025-10-04 22:37:53,618 - INFO - ARTIFACTS_LOADING
+2025-10-04 22:37:55,842 - INFO - ARTIFACTS_LOADING
+2025-10-04 22:37:55,842 - INFO - PREDICTION_GENERATION_START
+2025-10-04 22:37:55,842 - INFO - SUBMIT_FILE_CREATION
+2025-10-04 22:37:55,843 - INFO - DATA_LOADING_START - predict
+2025-10-04 22:37:55,989 - INFO - DATA_LOADING_SUCCESS - News: 2030, Candles: 1745, Tickers: 19
+2025-10-04 22:37:55,990 - INFO - DATA_PREPROCESSING_START
+2025-10-04 22:37:55,993 - INFO - DUPLICATE_REMOVAL - Removed: 0
+2025-10-04 22:37:55,993 - INFO - FEATURE_ENGINEERING - Creating advanced features
+2025-10-04 22:37:56,179 - INFO - TICKER_ASSIGNMENT
+2025-10-04 22:37:56,332 - INFO - TICKER_ASSIGNMENT - Assigned: 1890, Coverage: 93.1%
+2025-10-04 22:37:56,332 - INFO - NEWS_FEATURES_CREATION
+2025-10-04 22:37:56,463 - INFO - DATA_MERGING
+2025-10-04 22:37:56,466 - INFO - DATA_MERGING - Successfully merged with news features
+2025-10-04 22:37:56,466 - INFO - DATA_MERGING - Final shape: (1745, 43)
+2025-10-04 22:37:56,466 - INFO - FEATURE_ENGINEERING - Adding market features
+2025-10-04 22:37:56,470 - INFO - DATA_PREPROCESSING_SUCCESS
+2025-10-04 22:37:56,470 - INFO - FEATURE_PREPARATION
+2025-10-04 22:37:56,470 - INFO - FEATURE_PREPARATION - Available features: 43
+2025-10-04 22:37:56,472 - INFO - FEATURE_PREPARATION - NaN values: 5111
+2025-10-04 22:37:56,472 - INFO - FEATURE_IMPUTATION - Applying median imputation
+2025-10-04 22:37:56,479 - INFO - FEATURE_PREPARATION - Scaling features
+2025-10-04 22:37:56,481 - INFO - FEATURE_PREPARATION - Final shape: (1745, 43)
+2025-10-04 22:37:56,481 - INFO - DAILY_PREDICTIONS - Processing: AFLT
+2025-10-04 22:37:56,490 - INFO - DAILY_PREDICTIONS - Processing: ALRS
+2025-10-04 22:37:56,497 - INFO - DAILY_PREDICTIONS - Processing: CHMF
+2025-10-04 22:37:56,505 - INFO - DAILY_PREDICTIONS - Processing: GAZP
+2025-10-04 22:37:56,512 - INFO - DAILY_PREDICTIONS - Processing: GMKN
+2025-10-04 22:37:56,519 - INFO - DAILY_PREDICTIONS - Processing: LKOH
+2025-10-04 22:37:56,526 - INFO - DAILY_PREDICTIONS - Processing: MAGN
+2025-10-04 22:37:56,533 - INFO - DAILY_PREDICTIONS - Processing: MGNT
+2025-10-04 22:37:56,540 - INFO - DAILY_PREDICTIONS - Processing: MOEX
+2025-10-04 22:37:56,547 - INFO - DAILY_PREDICTIONS - Processing: MTSS
+2025-10-04 22:37:56,554 - INFO - DAILY_PREDICTIONS - Processing: NVTK
+2025-10-04 22:37:56,562 - INFO - DAILY_PREDICTIONS - Processing: PHOR
+2025-10-04 22:37:56,569 - INFO - DAILY_PREDICTIONS - Processing: PLZL
+2025-10-04 22:37:56,576 - INFO - DAILY_PREDICTIONS - Processing: ROSN
+2025-10-04 22:37:56,584 - INFO - DAILY_PREDICTIONS - Processing: RUAL
+2025-10-04 22:37:56,591 - INFO - DAILY_PREDICTIONS - Processing: SBER
+2025-10-04 22:37:56,598 - INFO - DAILY_PREDICTIONS - Processing: SIBN
+2025-10-04 22:37:56,605 - INFO - DAILY_PREDICTIONS - Processing: T
+2025-10-04 22:37:56,612 - INFO - DAILY_PREDICTIONS - Processing: VTBR
+2025-10-04 22:37:56,623 - INFO - SUBMIT_FILE_CREATION - File created: ./predictions/submission.csv
+2025-10-04 22:37:56,623 - INFO - SUBMIT_FILE_CREATION - Tickers processed: 19
+2025-10-04 22:37:56,623 - INFO - SUBMIT_FILE_CREATION - Day 1: mean=0.293
+2025-10-04 22:37:56,623 - INFO - SUBMIT_FILE_CREATION - Day 2: mean=0.293
+2025-10-04 22:37:56,623 - INFO - SUBMIT_FILE_CREATION - Day 3: mean=0.295
+2025-10-04 22:37:56,623 - INFO - SUBMIT_FILE_CREATION - Day 4: mean=0.299
+2025-10-04 22:37:56,624 - INFO - SUBMIT_FILE_CREATION - Day 5: mean=0.290
+2025-10-04 22:37:56,624 - INFO - SUBMIT_FILE_CREATION - Day 6: mean=0.298
+2025-10-04 22:37:56,624 - INFO - SUBMIT_FILE_CREATION - Day 7: mean=0.291
+2025-10-04 22:37:56,624 - INFO - SUBMIT_FILE_CREATION - Day 8: mean=0.297
+2025-10-04 22:37:56,624 - INFO - SUBMIT_FILE_CREATION - Day 9: mean=0.291
+2025-10-04 22:37:56,624 - INFO - SUBMIT_FILE_CREATION - Day 10: mean=0.294
+2025-10-04 22:37:56,624 - INFO - SUBMIT_FILE_CREATION - Day 11: mean=0.295
+2025-10-04 22:37:56,625 - INFO - SUBMIT_FILE_CREATION - Day 12: mean=0.296
+2025-10-04 22:37:56,625 - INFO - SUBMIT_FILE_CREATION - Day 13: mean=0.299
+2025-10-04 22:37:56,625 - INFO - SUBMIT_FILE_CREATION - Day 14: mean=0.296
+2025-10-04 22:37:56,625 - INFO - SUBMIT_FILE_CREATION - Day 15: mean=0.289
+2025-10-04 22:37:56,625 - INFO - SUBMIT_FILE_CREATION - Day 16: mean=0.290
+2025-10-04 22:37:56,625 - INFO - SUBMIT_FILE_CREATION - Day 17: mean=0.291
+2025-10-04 22:37:56,625 - INFO - SUBMIT_FILE_CREATION - Day 18: mean=0.292
+2025-10-04 22:37:56,625 - INFO - SUBMIT_FILE_CREATION - Day 19: mean=0.289
+2025-10-04 22:37:56,626 - INFO - SUBMIT_FILE_CREATION - Day 20: mean=0.291
+2025-10-04 22:37:56,626 - INFO - SUBMIT_FILE_CREATION - Overall stats: mean=0.293, min=0.100, max=0.651
+2025-10-04 22:37:56,626 - INFO - SUBMIT_FILE_CREATION - First 3 rows sample:
+2025-10-04 22:37:56,627 - INFO - SUBMIT_FILE_CREATION - AFLT: p1-p5 = ['0.169', '0.179', '0.166', '0.182', '0.199']
+2025-10-04 22:37:56,628 - INFO - SUBMIT_FILE_CREATION - ALRS: p1-p5 = ['0.115', '0.100', '0.144', '0.110', '0.116']
+2025-10-04 22:37:56,628 - INFO - SUBMIT_FILE_CREATION - CHMF: p1-p5 = ['0.194', '0.167', '0.198', '0.209', '0.197']
+2025-10-04 22:37:56,628 - INFO - PREDICTION_SCRIPT_SUCCESS
