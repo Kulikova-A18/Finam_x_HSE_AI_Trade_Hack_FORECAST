@@ -1,7 +1,7 @@
 run 
 
 ````
-model.py
+train.py
 ````
 
 after run
@@ -9,3 +9,4 @@ after run
 ````
 predict.py
 ````
+
